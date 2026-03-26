@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+  milvus:
+    image: milvusdb/milvus:v2.0.0
+    environment:
+      - TZ=UTC
+      - MILVUS_DB_DIRECTORY=/var/lib/milvus/db
+    volumes:
+      - milvus_db:/var/lib/milvus/db
+    ports:
+      - "19530:19530"
+      - "19121:19121"
+
+volumes:
+  milvus_db:
+    driver: local
