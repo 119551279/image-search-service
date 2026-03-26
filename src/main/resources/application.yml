@@ -1,0 +1,9 @@
+# Application Configuration
+
+milvus:
+  host: "localhost"
+  port: 19530
+
+embedding_service:
+  url: "http://localhost:5000"
+  timeout: 5  # seconds
